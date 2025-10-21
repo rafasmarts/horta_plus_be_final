@@ -68,6 +68,14 @@ app = Flask(__name__)
 def log_request_info():
     logging.info(f"Acesso de {request.remote_addr} ao endpoint {request.path}")
 
+#health check
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "status": "online",
+        "message": "Servidor Horta+ ativo ✅"
+    }), 200
+
 @app.route("/predict-morango", methods=["POST"])
 def predict_morango():
     if "file" not in request.files:
