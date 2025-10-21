@@ -1,0 +1,23 @@
+# Modelos e dados grandes
+*.h5
+*.keras
+*.json
+
+# Logs
+*.log
+
+# Ambientes virtuais
+venv/
+venv310/
+venv311/
+__pycache__/
+*.pyc
+
+# Configuração local
+.env
+.env.*
+*.key
+
+# Ficheiros temporários
+.DS_Store
+*.tmp
