@@ -1,9 +1,16 @@
+# --- Core Flask backend ---
 Flask==2.3.3
 flask-cors==4.0.0
-tensorflow==2.19.0
-keras==3.5.0
-numpy>=1.26.0,<2.2.0
-pillow==10.0.0
 gunicorn==21.2.0
+
+# --- TensorFlow stack (CPU only, compatível com Python 3.11) ---
+tensorflow-cpu==2.17.1
+keras==3.3.3
+numpy==1.26.4
+ml-dtypes==0.3.2
+tensorboard==2.17.0
+pillow==10.0.0
+
+# --- Utilitários ---
 setuptools>=70.0.0
 wheel>=0.43.0
