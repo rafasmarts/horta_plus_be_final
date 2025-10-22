@@ -63,6 +63,8 @@ def predict_with_fallback(img_file, model, class_names, threshold=0.7):
 model, class_names = load_model_with_config()
 # --- Flask app ---
 app = Flask(__name__)
+from flask_cors import CORS
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.before_request
 def log_request_info():
